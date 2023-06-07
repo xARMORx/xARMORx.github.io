@@ -1,139 +1,17 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Красивый Wiki сайт</title>
-    <style>
-        body {
-            font-family: FiraCode, Bold;
-            background-color: #222;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #333;
-            overflow: hidden; /* Add this line */
-        }
-
-        h1 {
-            text-align: center;
-            color: #fff;
-        }
-
-        #search-input {
-            margin-bottom: 20px;
-            padding: 5px;
-            width: 100%;
-            box-sizing: border-box;
-            background-color: #444;
-            color: #fff;
-            border: none;
-            outline: none;
-            border-radius: 5px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #8721BF;
-            color: #fff;
-            border: none;
-            border-radius: 10px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            margin-bottom: 10px;
-            text-align: center;
-            width: 90%;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: #791DAB;
-        }
-
-        hr.solid {
-            border-top: 1px solid #bbb;
-        }
-
-        ul {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 5px;
-            display: none;
-        }
-
-        li.visible {
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>MoonR5 Wiki</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>MoonR5 Wiki</h1>
+  <header>
+    <h1>MoonR5 Wiki</h1>
+  </header>
 
-        <input type="text" id="search-input" placeholder="Введите название или описание функции">
-        <ul id="link-list">
-            <li class="visible">
-                <a href="https://www.example1.com" class="button">
-                    <div class="button-title">isSampInit</div>
-                    <div class="button-description">Проверяет инициализирован ли SAMP</div>
-                </a>
-            </li>
-            <li class="visible">
-                <a href="https://www.example2.com" class="button">
-                    <div class="button-title">getPlayerCount</div>
-                    <div class="button-description">Возвращает количество игроков на сервере</div>
-                </a>
-            </li>
-            <li class="visible">
-                <a href="https://www.example3.com" class="button">
-                    <div class="button-title">isLocalPlayerSpawned</div>
-                    <div class="button-description">Проверяет заспавнился ли игрок</div>
-                </a>
-            </li>
-            <li class="visible">
-                <a href="https://www.example4.com" class="button">
-                    <div class="button-title">isPlayerConnected</div>
-                    <div class="button-description">Проверяет подключен ли игрок к серверу</div>
-                </a>
-            </li>
-            <li class="visible">
-                <a href="https://www.example5.com" class="button">
-                    <div class="button-title">doesExist3dText</div>
-                    <div class="button-description">Проверяет существует ли 3D-текст по его ID</div>
-                </a>
-            </li>
-        </ul>
-    </div>
+  <input type="text" id="search-input" placeholder="Введите название, или описание функции">
+  <div id="functions-container"></div>
 
-    <script>
-        const searchInput = document.getElementById('search-input');
-        const linkList = document.getElementById('link-list');
-        const allItems = linkList.getElementsByTagName('li');
-
-        searchInput.addEventListener('input', function() {
-            const searchText = searchInput.value.toLowerCase();
-
-            Array.from(allItems).forEach(function(item) {
-                const link = item.querySelector('.button');
-                const linkTitle = item.querySelector('.button-title').textContent.toLowerCase();
-                const linkDescription = item.querySelector('.button-description').textContent.toLowerCase();
-
-                if (linkTitle.includes(searchText) || linkDescription.includes(searchText)) {
-                    item.classList.add('visible');
-                } else {
-                    item.classList.remove('visible');
-                }
-            });
-        });
-    </script>
+  <script src=script.js></script>
 </body>
 </html>
