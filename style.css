@@ -1,13 +1,19 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: FiraCode, Bold;
   margin: 0;
   padding: 0;
 }
 header {
   background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 5px;
   text-align: center;
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 20px;
 }
 h1, h2 {
   margin: 0;
@@ -34,6 +40,15 @@ h1, h2 {
   border-radius: 6px;
   overflow: auto;
 }
+
+a {
+  color:rgb(31, 100, 228)
+}
+
+a:hover {
+  color:rgba(31, 100, 228, 0.589)
+}
+
 code {
   display: block;
   margin: 0;
