@@ -5,7 +5,7 @@ const functions = [
       example: "local result = isSampInit()"
   },
   {
-      name: 'getPlayerConut',
+      name: 'getPlayerCount',
       description: 'Возвращает количество игроков на сервере',
       example: "local count = getPlayerCount()"
   },

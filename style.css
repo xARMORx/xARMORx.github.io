@@ -8,6 +8,7 @@ header {
   color: #fff;
   padding: 5px;
   text-align: center;
+  box-shadow: 5px 5px 50px #202020;
 }
 .flex {
   display: flex;
