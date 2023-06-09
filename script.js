@@ -302,17 +302,12 @@ const functions = [
   {
       name: 'sampGetServerAddress',
       description: 'Возвращает IP сервера',
-      example: "local serverAddress = sampGetServerAddress()"
+      example: "local address, port = sampGetServerAddress()"
   },
   {
       name: 'sampGetServerName',
       description: 'Возвращает название сервера',
       example: "local serverName = sampGetServerName()"
-  },
-  {
-      name: 'sampGetServerPort',
-      description: 'Возвращает порт сервера',
-      example: "local serverPort = sampGetServerPort()"
   },
   {
       name: 'sampGetGameState',
