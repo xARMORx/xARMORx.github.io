@@ -5,334 +5,354 @@ const functions = [
       example: "local result = isSampInit()"
   },
   {
-      name: 'getPlayerCount',
+      name: 'sampGetPlayerCount',
       description: 'Возвращает количество игроков на сервере',
-      example: "local count = getPlayerCount()"
+      example: "local count = sampGetPlayerCount()"
   },
   {
-      name: 'isLocalPlayerSpawned',
+      name: 'sampIsLocalPlayerSpawned',
       description: 'Проверяет заспавнился ли игрок',
-      example: "local result = isLocalPlayerSpawned()"
+      example: "local result = sampIsLocalPlayerSpawned()"
   },
   {
-      name: 'isPlayerConnected',
+      name: 'sampIsPlayerConnected',
       description: 'Проверяет подключен ли игрок к серверу',
-      example: "local result = isPlayerConnected(int id)"
+      example: "local result = sampIsPlayerConnected(int id)"
   },
   {
-      name: 'getPlayerNickName',
+      name: 'sampGetPlayerNickName',
       description: 'Возвращает имя игрока по его ID',
-      example: "local name = getPlayerNickName(int id)"
+      example: "local name = sampGetPlayerNickName(int id)"
   },
   {
-      name: 'getPlayerPing',
+      name: 'sampGetPlayerPing',
       description: 'Возвращает пинг игрока по его ID',
-      example: "local pint = getPlayerPing(int id)"
+      example: "local pint = sampGetPlayerPing(int id)"
   },
   {
-      name: 'getPlayerScore',
+      name: 'sampGetPlayerScore',
       description: 'Возвращает количество очков игрока по его ID',
-      example: "local score = getPlayerScore(int id)"
+      example: "local score = sampGetPlayerScore(int id)"
   },
   {
-      name: 'addChatMessage',
+      name: 'sampAddChatMessage',
       description: 'Отправляет сообщение в чат',
-      example: "addChatMessage(string szMessage, uint messageColor)"
+      example: "sampAddChatMessage(string szMessage, uint messageColor)"
   },
   {
-      name: 'getChatMode',
+      name: 'sampGetChatMode',
       description: 'Возвращает режим чата',
-      example: "local mode = getChatMode()"
+      example: "local mode = sampGetChatMode()"
   },
   {
-      name: 'setChatMode',
+      name: 'sampSetChatMode',
       description: 'Устанавливает режим чата ( 0-2 )',
-      example: "setChatMode(int mode)"
+      example: "sampSetChatMode(int mode)"
   },
   {
-      name: 'getPageSize',
+      name: 'sampSetPageSize',
       description: 'Возвращает количество отображаемых строчек чата',
-      example: "local size = getPageSize()"
+      example: "local size = sampGetPageSize()"
   },
   {
-      name: 'setChatScrollBarPos',
+      name: 'sampSetChatScrollBarPos',
       description: 'Устанавливает позицию курсора чата',
-      example: "setChatScrollBarPos(int position)"
+      example: "sampSetChatScrollBarPos(int position)"
   },
   {
-      name: 'scrollChatScrollBar',
+      name: 'sampScrollChatScrollBar',
       description: 'Прокручивает курсор чата на указаное количество строк',
       example: "scrollChatScrollBar(int count)"
   },
   {
-      name: 'getChatScrollBarPos',
+      name: 'sampGetChatScrollBarPos',
       description: 'Возвращает позицию курсора чата',
       example: "local position = getChatScrollBarPos()"
   },
   {
-      name: 'setChatString',
+      name: 'sampSetChatString',
       description: 'Устанавливает параметры строке чата по её ID',
-      example: "setChatString(int id, string szText, string szPrefix, uint textColor, uint prefixColor)"
+      example: "sampSetChatString(int id, string szText, string szPrefix, uint textColor, uint prefixColor)"
   },
   {
-      name: 'showDialog',
+      name: 'sampGetChatString',
+      description: 'Возвращает параметры строке чата по её ID',
+      example: "local szText, szPrefix, textColor, prefixColor = sampGetChatString(int id)"
+  },
+  {
+      name: 'sampShowDialog',
       description: 'Показывает диалог с указаными параметрами',
-      example: "showDialog(int id, int style, string szTitle, string szText, string szLeftButton, string szRightButton)"
+      example: "sampShowDialog(int id, int style, string szTitle, string szText, string szLeftButton, string szRightButton)"
   },
   {
-      name: 'closeDialogWithButton',
+      name: 'sampCloseDialogWithButton',
       description: 'Закрывает диалог указанной кнопкой ( 0-1 )',
-      example: "closeDialogWithButton(int buttonId)"
+      example: "sampCloseDialogWithButton(int buttonId)"
   },
   {
-      name: 'getDialogTitle',
+      name: 'sampGetDialogTitle',
       description: 'Возвращает название диалога',
-      example: "local title = getDialogTitle()"
+      example: "local title = sampGetDialogTitle()"
   },
   {
-      name: 'getDialogStyle',
+      name: 'sampGetDialogStyle',
       description: 'Возвращает стиль диалога',
-      example: "local style = getDialogStyle()"
+      example: "local style = sampGetDialogStyle()"
   },
   {
-      name: 'getDialogId',
+      name: 'sampGetDialogId',
       description: 'Возвращает ID диалога',
-      example: "local id = getDialogId()"
+      example: "local id = sampGetDialogId()"
   },
   {
-      name: 'getDialogText',
+      name: 'sampGetDialogText',
       description: 'Возвращает текст диалога',
-      example: "local text = getDialogText()"
+      example: "local text = sampGetDialogText()"
   },
   {
-      name: 'isDialogActive',
+      name: 'sampIsDialogActive',
       description: 'Проверяет активен ли диалог',
-      example: "local result = isDialogActive()"
+      example: "local result = sampIsDialogActive()"
   },
   {
-      name: 'getDialogEditBoxText',
+      name: 'sampGetDialogEditBoxText',
       description: 'Возвращает текст из инпута диалога',
-      example: "local text = getDialogEditBoxText()"
+      example: "local text = sampGetDialogEditBoxText()"
   },
   {
-      name: 'setDialogEditBoxText',
+      name: 'sampSetDialogEditBoxText',
       description: 'Устанавливает текст в инпут диалога',
-      example: "setDialogEditBoxText(string szText)"
+      example: "sampSetDialogEditBoxText(string szText)"
   },
   {
-      name: 'getDialogListBoxCount',
+      name: 'sampGetDialogListBoxCount',
       description: 'Возвращает количество кнопок в List диалоге',
-      example: "local listCount = getDialogListBoxCount()"
+      example: "local listCount = sampGetDialogListBoxCount()"
   },
   {
-      name: 'setDialogListBoxIndex',
+      name: 'sampSetDialogListBoxIndex',
       description: 'Устанавливает позицию кнопки в List диалоге',
-      example: "setDialogListBoxIndex(int position)"
+      example: "sampSetDialogListBoxIndex(int position)"
   },
   {
-      name: 'getDialogListBoxIndex',
+      name: 'sampGetDialogListBoxIndex',
       description: 'Возвращает номер текущей кнопки List диалога',
-      example: "local listNumber = getDialogListBoxIndex()"
+      example: "local listNumber = sampGetDialogListBoxIndex()"
   },
   {
-      name: 'isDialogClientside',
+      name: 'sampIsDialogClientside',
       description: 'Проверяет является ли диалог клиентским',
-      example: "local result = isDialogClientside()"
+      example: "local result = sampIsDialogClientside()"
   },
   {
-      name: 'setChatInputText',
+      name: 'sampSetChatInputText',
       description: 'Устанавливает текст в окно ввода чата',
-      example: "setChatInputText(string szText)"
+      example: "sampSetChatInputText(string szText)"
   },
   {
-      name: 'getChatInputText',
+      name: 'sampGetChatInputText',
       description: 'Возвращает текст из окна ввода чата',
-      example: "local text = getChatInputText()"
+      example: "local text = sampGetChatInputText()"
   },
   {
-      name: 'isChatInputActive',
+      name: 'sampIsChatInputActive',
       description: 'Проверяет включено ли окно ввода чата',
-      example: "local result = isChatInputActive()"
+      example: "local result = sampIsChatInputActive()"
   },
   {
-      name: 'setChatInputState',
+      name: 'sampSetChatInputState',
       description: 'Устанавливает статус активности окну ввода чата',
-      example: "setChatInputState(bool state)"
+      example: "sampSetChatInputState(bool state)"
   },
   {
-      name: 'unRegisterChatCommand',
-      description: 'Удаляет зарегистрированную комманду',
-      example: "unRegisterChatCommand(string szName)"
-  },
-  {
-      name: 'registerChatCommand',
+      name: 'sampRegisterChatCommand',
       description: 'Регистрирует комманду с указаными параметрами ( Пока что возможны баги/краши )',
-      example: "registerChatCommand(string szName, function name)"
+      example: "sampRegisterChatCommand(string szName, function name)"
   },
   {
-      name: 'addRecall',
+      name: 'sampAddRecall',
       description: 'Добавляет текст в RecallBuffer окна ввода чата',
-      example: "addRecall(string szText)"
+      example: "sampAddRecall(string szText)"
   },
   {
-      name: 'getVehicleHandleById',
+      name: 'sampGetVehicleHandleById',
       description: 'Возвращает хендл автомобиля по его ID',
-      example: "local handle = getVehicleHandleById(int id)"
+      example: "local handle = sampGetVehicleHandleById(int id)"
   },
   {
-      name: 'getVehicleIdByHandle',
+      name: 'sampGetVehicleIdByHandle',
       description: 'Возвращает ID автомобиля по его хендлу',
-      example: "local id = getVehicleIdByHandle(handle vehicleHandle)"
+      example: "local id = sampGetVehicleIdByHandle(handle vehicleHandle)"
   },
   {
-      name: 'doesVehicleExistById',
+      name: 'sampDoesVehicleExistById',
       description: 'Проверяет существует ли автомобиль по его ID',
-      example: "local result = doesVehicleExistById(int id)"
+      example: "local result = sampDoesVehicleExistById(int id)"
   },
   {
-      name: 'getPlayerIdByHandle',
+      name: 'sampGetPlayerIdByHandle',
       description: 'Возвращает ID игрока по его хендлу',
-      example: "local id = getPlayerIdByHandle(handle playerHandle)"
+      example: "local id = sampGetPlayerIdByHandle(handle playerHandle)"
   },
   {
-      name: 'getPlayerHandleById',
+      name: 'sampGetPlayerHandleById',
       description: 'Возвращает хендл игрока по его ID',
-      example: "local handle = getPlayerHandleById(int id)"
+      example: "local handle = sampGetPlayerHandleById(int id)"
   },
   {
-      name: 'killPlayerById',
+      name: 'sampKillPlayerById',
       description: 'Убивает игрока по его ID',
-      example: "killPlayerById(int id)"
+      example: "sampKillPlayerById(int id)"
   },
   {
-      name: 'killPlayerByHandle',
+      name: 'sampKillPlayerByHandle',
       description: 'Убивает игрока по его хендлу',
-      example: "killPlayerByHandle(handle playerHandle)"
+      example: "sampKillPlayerByHandle(handle playerHandle)"
   },
   {
-      name: 'sendSpawn',
+      name: 'sampSendSpawn',
       description: 'Спавнит игрока',
-      example: "local result = sendSpawn()"
+      example: "local result = sampSendSpawn()"
   },
   {
-      name: 'isPlayerNPC',
+      name: 'sampIsPlayerNPC',
       description: 'Проверяет является ли игрок NPC по его ID',
-      example: "local result = isPlayerNPC(int id)"
+      example: "local result = sampIsPlayerNPC(int id)"
   },
   {
-      name: 'getPlayerVehicleSeatById',
+      name: 'sampGetPlayerVehicleSeatById',
       description: 'Возвращает номер сидения игрока по его ID',
-      example: "local seatId = getPlayerVehicleSeatById(int id)"
+      example: "local seatId = sampGetPlayerVehicleSeatById(int id)"
   },
   {
-      name: 'setLocalPlayerName',
+      name: 'sampSetLocalPlayerName',
       description: 'Устанавливает имя локальному игроку',
-      example: "setLocalPlayerName(string szName)"
+      example: "sampSetLocalPlayerName(string szName)"
   },
   {
-      name: 'getPlayerSpecialAction',
+      name: 'sampGetPlayerSpecialAction',
       description: 'Возвращает специальное действие игрока по его ID',
-      example: "local specialAction = getPlayerSpecialAction(int id)"
+      example: "local specialAction = sampGetPlayerSpecialAction(int id)"
   },
   {
-      name: 'getPlayerVehicleSeatByHandle',
+      name: 'sampGetPlayerVehicleSeatByHandle',
       description: 'Возвращает номер сидения игрока по хендлу игрока',
-      example: "local seatId = getPlayerVehicleSeatByHandle(handle playerHandle)"
+      example: "local seatId = sampGetPlayerVehicleSeatByHandle(handle playerHandle)"
   },
   {
-      name: 'getPlayerVehicleId',
+      name: 'sampGetPlayerVehicleId',
       description: 'Возвращает ID автомобиля игрока по его ID',
-      example: "local vehicleId = getPlayerVehicleId(int playerId)"
+      example: "local vehicleId = sampGetPlayerVehicleId(int playerId)"
   },
   {
-      name: 'deletePlayerById',
+      name: 'sampDeletePlayerById',
       description: 'Удаляет игрока по его ID',
-      example: "local result = deletePlayerById(int id)"
+      example: "local result = sampDeletePlayerById(int id)"
   },
   {
-      name: 'deletePlayerByHandle',
+      name: 'sampDeletePlayerByHandle',
       description: 'Удаляет игрока по его хендлу',
-      example: "local result = deletePlayerByHandle(handle playerHandle)"
+      example: "local result = sampDeletePlayerByHandle(handle playerHandle)"
   },
   {
-      name: 'getPlayerColor',
+      name: 'sampGetPlayerColor',
       description: 'Возвращает цвет игрока из Tab в формате RGBA',
-      example: "local color = getPlayerColor(int id)"
+      example: "local color = sampGetPlayerColor(int id)"
   },
   {
-      name: 'getDistanceToPlayer',
+      name: 'sampGetDistanceToPlayer',
       description: 'Возвращает дистанцию между локальным и указанным игроками',
-      example: "local dist = getDistanceToPlayer(int id)"
+      example: "local dist = sampGetDistanceToPlayer(int id)"
   },
   {
-      name: 'getPlayerHealth',
+      name: 'sampGetPlayerHealth',
       description: 'Возвращает количество ХП игрока',
-      example: "local health = getPlayerHealth(int id)"
+      example: "local health = sampGetPlayerHealth(int id)"
   },
   {
-      name: 'getPlayerArmour',
+      name: 'sampGetPlayerArmour',
       description: 'Возвращает количество брони игрока',
-      example: "local armour = getPlayerArmour(int id)"
+      example: "local armour = sampGetPlayerArmour(int id)"
   },
   {
-      name: 'getScoreboardState',
+      name: 'sampGetScoreboardState',
       description: 'Возвращает статус таблицы Tab',
-      example: "local state = getScoreboardState()"
+      example: "local state = sampGetScoreboardState()"
   },
   {
-      name: 'setScoreboardListBoxIndex',
+      name: 'sampSetScoreboardListBoxIndex',
       description: 'Устанавливает позицию листа в Tab по её номеру',
-      example: "setScoreboardListBoxIndex(int position)"
+      example: "sampSetScoreboardListBoxIndex(int position)"
   },
   {
-      name: 'setCursorMode',
+      name: 'sampSetCursorMode',
       description: 'Устанавливает режим SAMP курсора ( 1 - 4 )',
-      example: "setCursorMode(int mode)"
+      example: "sampSetCursorMode(int mode)"
   },
   {
-      name: 'toggleCursor',
+      name: 'sampToggleCursor',
       description: 'Переключает режим SAMP курсора',
-      example: "toggleCursor(bool status)"
+      example: "sampToggleCursor(bool status)"
   },
   {
-      name: 'getCursorMode',
+      name: 'sampGetCursorMode',
       description: 'Возвращает режим SAMP курсора',
-      example: "local cursorMode = getCursorMode()"
+      example: "local cursorMode = sampGetCursorMode()"
   },
   {
-      name: 'getServerAddress',
+      name: 'sampGetServerAddress',
       description: 'Возвращает IP сервера',
-      example: "local serverAddress = getServerAddress()"
+      example: "local serverAddress = sampGetServerAddress()"
   },
   {
-      name: 'getServerName',
+      name: 'sampGetServerName',
       description: 'Возвращает название сервера',
-      example: "local serverName = getServerName()"
+      example: "local serverName = sampGetServerName()"
   },
   {
-      name: 'getServerPort',
+      name: 'sampGetServerPort',
       description: 'Возвращает порт сервера',
-      example: "local serverPort = getServerPort()"
+      example: "local serverPort = sampGetServerPort()"
   },
   {
-      name: 'getGameState',
+      name: 'sampGetGameState',
       description: 'Возвращает статус игры',
-      example: "local gameState = getGameState()"
+      example: "local gameState = sampGetGameState()"
   },
   {
-      name: 'setGameState',
+      name: 'sampSetGameState',
       description: 'Устанавливает статус игры',
-      example: "setGameState(int state)"
+      example: "sampSetGameState(int state)"
   },
   {
-      name: 'delete3dText',
+      name: 'sampDelete3dText',
       description: 'Удаляет 3d Текст по его ID',
-      example: "delete3dText(int ID)"
+      example: "sampDelete3dText(int ID)"
   },
   {
-      name: 'create3dText',
+      name: 'sampCreate3dText',
       description: 'Создает 3d Текст с задаными параметрами',
-      example: "create3dText(int nId, string szText, int color, float x, float y, float z, float fDrawDistance, bool bBehindWalls, int nAttachedToPlayer, int nAttachedToVehicle)"
+      example: "sampCreate3dText(int nId, string szText, int color, float x, float y, float z, float fDrawDistance, bool bBehindWalls, int nAttachedToPlayer, int nAttachedToVehicle)"
+  },
+  {
+      name: 'sampDoesExist3dText',
+      description: 'Проверяет 3d Текст на существование',
+      example: "local result = sampCreate3dText(int nId)"
+  },
+  {
+      name: 'sampGet3dTextInfo',
+      description: 'Возвращает данные о 3d Тексте',
+      example: "local text, color, x, y, z, distance, behindWalls, attachedToPlayer, attachedToVehicle = sampGet3dTextInfo(int nId)"
+  },
+  {
+      name: 'sampCreateChatBubble',
+      description: 'Создает текст над головой указаного игрока',
+      example: "sampCreateChatBubble(int nId, string szText, int color, float distance, int time)"
+  },
+  {
+      name: 'sampGetChatBubbleInfo',
+      description: 'Возвращает данные о тексте над головой указаного игрока',
+      example: "local result, text, color, time = sampGetChatBubbleInfo(int nId)"
   },
 ];
 
@@ -341,39 +361,39 @@ const searchInput = document.getElementById("search-input");
 
 // функция, которая отображает все функции на странице
 function displayAllFunctions() {
-functionsContainer.innerHTML = "";
+    functionsContainer.innerHTML = "";
 
-for (let i = 0; i < functions.length; i++) {
-  const functionDiv = createFunctionElement(functions[i]);
-  functionsContainer.appendChild(functionDiv);
-}
+    for (let i = 0; i < functions.length; i++) {
+        const functionDiv = createFunctionElement(functions[i]);
+        functionsContainer.appendChild(functionDiv);
+    }
 }
 
 // функция, которая создает элементы для одной функции
 function createFunctionElement(func) {
-const functionDiv = document.createElement("div");
-functionDiv.classList.add("section");
+    const functionDiv = document.createElement("div");
+    functionDiv.classList.add("section");
 
-const functionName = document.createElement("h2");
-functionName.classList.add("function-name");
-functionName.textContent = func.name;
-functionDiv.appendChild(functionName);
+    const functionName = document.createElement("h2");
+    functionName.classList.add("function-name");
+    functionName.textContent = func.name;
+    functionDiv.appendChild(functionName);
 
-const functionDescription = document.createElement("p");
-functionDescription.classList.add("function-description");
-functionDescription.textContent = func.description;
-functionDiv.appendChild(functionDescription);
+    const functionDescription = document.createElement("p");
+    functionDescription.classList.add("function-description");
+    functionDescription.textContent = func.description;
+    functionDiv.appendChild(functionDescription);
 
-const exampleContainer = document.createElement("div");
-exampleContainer.classList.add("example-container");
-functionDiv.appendChild(exampleContainer);
+    const exampleContainer = document.createElement("div");
+    exampleContainer.classList.add("example-container");
+    functionDiv.appendChild(exampleContainer);
 
-const exampleCode = document.createElement("code");
-exampleCode.classList.add("function-example");
-exampleCode.textContent = func.example;
-exampleContainer.appendChild(exampleCode);
+    const exampleCode = document.createElement("code");
+    exampleCode.classList.add("function-example");
+    exampleCode.textContent = func.example;
+    exampleContainer.appendChild(exampleCode);
 
-return functionDiv;
+    return functionDiv; 
 }
 
 // обработчик события ввода текста в поле поиска
