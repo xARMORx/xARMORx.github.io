@@ -27,7 +27,7 @@ const functions = [
   {
       name: 'sampGetPlayerPing',
       description: 'Возвращает пинг игрока по его ID',
-      example: "local pint = sampGetPlayerPing(int id)"
+      example: "local ping = sampGetPlayerPing(int id)"
   },
   {
       name: 'sampGetPlayerScore',
