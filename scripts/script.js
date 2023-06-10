@@ -55,7 +55,7 @@ const functions = [
   {
       name: 'sampSetPageSize',
       description: 'Возвращает количество отображаемых строчек чата',
-      example: "local size = sampGetPageSize()"
+      example: "sampSetPageSize(int size)"
   },
   {
       name: 'sampSetChatScrollBarPos',
