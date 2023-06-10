@@ -46,7 +46,10 @@ const functions = [
   },
   {
       name: 'sampSetChatMode',
-      description: 'Устанавливает режим чата ( 0-2 )',
+      description: 'Устанавливает режим чата\
+      \n0 - Чат отключен\
+      \n1 - Чат без обводки\
+      \n2 - Обычный чат',
       example: "sampSetChatMode(int mode)"
   },
   {
@@ -286,7 +289,12 @@ const functions = [
   },
   {
       name: 'sampSetCursorMode',
-      description: 'Устанавливает режим SAMP курсора ( 1 - 4 )',
+      description: 'Устанавливает режим SAMP курсора\
+      \n0 - Курсор отключен\
+      \n1 - Управление клавиатурой заблокировано, курсор отключен\
+      \n2 - Управление клавиатурой и мышкой заблокировано, курсор включен\
+      \n3 - Управление мышкой заблокировано, курсор включен\
+      \n4 - Управление мышкой заблокировано, курсор отключен',
       example: "sampSetCursorMode(int mode)"
   },
   {
@@ -316,7 +324,13 @@ const functions = [
   },
   {
       name: 'sampSetGameState',
-      description: 'Устанавливает статус игры',
+      description: 'Устанавливает статус игры\
+      \n0 - GAMESTATE_NONE\
+      \n1 - GAMESTATE_WAIT_CONNECT\
+      \n2 - GAMESTATE_AWAIT_JOIN\
+      \n3 - GAMESTATE_CONNECTED\
+      \n4 - GAMESTATE_RESTARTING\
+      \n5 - GAMESTATE_DISCONNECTED',
       example: "sampSetGameState(int state)"
   },
   {
@@ -349,6 +363,11 @@ const functions = [
       description: 'Возвращает данные о тексте над головой указаного игрока',
       example: "local result, text, color, time = sampGetChatBubbleInfo(int nId)"
   },
+  {
+      name: 'unload',
+      description: 'Выгружает комманды которые регистрировал скрипт.',
+      example: "addEventHandler(\"onScriptTerminate\", function(scr, quit) \n\tif scr == thisScript() then unload() end end)"
+  },
 ];
 
 const functionsContainer = document.getElementById("functions-container");
@@ -364,7 +383,6 @@ function displayAllFunctions() {
     }
 }
 
-// функция, которая создает элементы для одной функции
 function createFunctionElement(func) {
     const functionDiv = document.createElement("div");
     functionDiv.classList.add("section");
@@ -376,7 +394,7 @@ function createFunctionElement(func) {
 
     const functionDescription = document.createElement("p");
     functionDescription.classList.add("function-description");
-    functionDescription.textContent = func.description;
+    functionDescription.innerHTML = func.description.replace(/\n/g, '<br>');
     functionDiv.appendChild(functionDescription);
 
     const exampleContainer = document.createElement("div");
@@ -385,8 +403,16 @@ function createFunctionElement(func) {
 
     const exampleCode = document.createElement("code");
     exampleCode.classList.add("function-example");
-    exampleCode.textContent = func.example;
+    exampleCode.innerHTML = func.example.replace(/\n/g, '<br>');
     exampleContainer.appendChild(exampleCode);
+
+    hljs.highlightElement(exampleCode, { language: "lua" });
+
+    const button = document.createElement('button');
+    button.classList.add('copy-button');
+    button.innerHTML = '<i class="icon-copy"></i>';
+    button.onclick = () => copyCode(exampleCode.textContent);
+    exampleCode.appendChild(button);
 
     return functionDiv; 
 }
@@ -395,19 +421,40 @@ function createFunctionElement(func) {
 searchInput.addEventListener("input", function() {
 const searchText = searchInput.value.trim().toLowerCase();
 if (searchText.length === 0) {
-  displayAllFunctions();
-  return;
+    displayAllFunctions();
+    return;
 }
 
 functionsContainer.innerHTML = "";
 for (let i = 0; i < functions.length; i++) {
-  const func = functions[i];
-  if (func.name.toLowerCase().includes(searchText) || func.description.toLowerCase().includes(searchText)) {
+    const func = functions[i];
+    if (func.name.toLowerCase().includes(searchText) || func.description.toLowerCase().includes(searchText)) {
     const functionDiv = createFunctionElement(func);
     functionsContainer.appendChild(functionDiv);
-  }
+    }
 }
 });
+
+// функция, которая копирует код в буфер обмена
+function copyCode(code) {
+    const textarea = document.createElement('textarea');
+    textarea.value = code;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+
+    // добавляем уведомление о копировании текста
+    const notification = document.createElement('div');
+    notification.textContent = 'Текст скопирован';
+    notification.classList.add('copy-notification');
+    document.body.appendChild(notification);
+
+    // удаляем уведомление через 2 секунды
+    setTimeout(() => {
+        document.body.removeChild(notification);
+    }, 5000);
+}
 
 // отображаем все функции при первой загрузке страницы
 displayAllFunctions();

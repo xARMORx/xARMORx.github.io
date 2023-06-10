@@ -84,7 +84,7 @@ input[type="text"]:focus {
 }
 
 .copy-button {
-  position: absolute;
+  position: relative; /* Добавляем относительное позиционирование для родительского элемента */
   top: 0;
   right: 0;
   font-size: 14px;
@@ -117,7 +117,7 @@ input[type="text"]:focus {
 
   /* добавляем анимацию появления и исчезновения */
   animation-name: fade-in-out;
-  animation-duration: 3s;
+  animation-duration: 1s;
 }
 
 /* анимация появления и исчезновения */
