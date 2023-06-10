@@ -133,8 +133,9 @@ input[type="text"]:focus {
 }
 
 .icon-copy:before {
-  content: '\f0c5';
+  content: '\f0c5 ';
   font-family: 'Font Awesome 5 Free';
+  font-style: bold;
   font-weight: 900;
 }
 

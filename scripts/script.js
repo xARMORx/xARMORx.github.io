@@ -410,7 +410,7 @@ function createFunctionElement(func) {
 
     const button = document.createElement('button');
     button.classList.add('copy-button');
-    button.innerHTML = '<i class="icon-copy"></i>';
+    button.innerHTML = '<i class="fas fa-copy"></i>';
     button.onclick = () => copyCode(exampleCode.textContent);
     exampleCode.appendChild(button);
 
