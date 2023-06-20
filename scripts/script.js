@@ -10,6 +10,11 @@ const functions = [
       example: "local count = sampGetPlayerCount()"
   },
   {
+      name: 'sampGetHandle',
+      description: 'Возвращает адрес на samp.dll',
+      example: "local sampHandle = sampGetHandle()"
+  },
+  {
       name: 'sampIsLocalPlayerSpawned',
       description: 'Проверяет заспавнился ли игрок',
       example: "local result = sampIsLocalPlayerSpawned()"
@@ -193,14 +198,24 @@ const functions = [
       example: "local result = sampDoesVehicleExistById(int id)"
   },
   {
+      name: 'sampSetLicensePlateOnVehicle',
+      description: 'Устанавливает транспорту текст на номера по её ID ( Работает только один раз )',
+      example: "local result = sampSetLicensePlateOnVehicle(int id, string szText)"
+  },
+  {
       name: 'sampGetPlayerIdByHandle',
       description: 'Возвращает ID игрока по его хендлу',
-      example: "local id = sampGetPlayerIdByHandle(handle playerHandle)"
+      example: "local result, id = sampGetPlayerIdByHandle(handle playerHandle)"
   },
   {
       name: 'sampGetPlayerHandleById',
       description: 'Возвращает хендл игрока по его ID',
-      example: "local handle = sampGetPlayerHandleById(int id)"
+      example: "local result, handle = sampGetPlayerHandleById(int id)"
+  },
+  {
+      name: 'sampSendChat',
+      description: 'Отпарвляет сообщение/команду в чат',
+      example: "sampSendChat(string message)"
   },
   {
       name: 'sampKillPlayerById',
@@ -362,6 +377,26 @@ const functions = [
       name: 'sampGetChatBubbleInfo',
       description: 'Возвращает данные о тексте над головой указаного игрока',
       example: "local result, text, color, time = sampGetChatBubbleInfo(int nId)"
+  },
+  {
+      name: 'sampSendPickup',
+      description: 'Отпарвляет серверу RPC о том что игрок поднял пикап',
+      example: "sampSendPickup(int nId)"
+  },
+  {
+      name: 'sampGetPickupHandleById',
+      description: 'Возвращает хендл пикапа по его ID',
+      example: "local handle = sampGetPickupHandleById(int nId)"
+  },
+  {
+      name: 'sampGetPickupModelById',
+      description: 'Возвращает модель пикапа по его ID',
+      example: "local model = sampGetPickupModelById(int nId)"
+  },
+  {
+      name: 'sampGetPickupIdByHandle',
+      description: 'Возвращает ID пикапа по его хендлу',
+      example: "local id = sampGetPickupIdByHandle(handle pickupHandle)"
   },
   {
       name: 'unload',
