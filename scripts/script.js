@@ -15,6 +15,11 @@ const functions = [
       example: "local sampHandle = sampGetHandle()"
   },
   {
+    name: 'sampConnectToServer',
+    description: 'Подключается к серверу по его IP',
+    example: "sampConnectToServer(\"127.0.0.1\", 7777)"
+  },
+  {
       name: 'sampIsLocalPlayerSpawned',
       description: 'Проверяет заспавнился ли игрок',
       example: "local result = sampIsLocalPlayerSpawned()"
@@ -397,6 +402,92 @@ const functions = [
       name: 'sampGetPickupIdByHandle',
       description: 'Возвращает ID пикапа по его хендлу',
       example: "local id = sampGetPickupIdByHandle(handle pickupHandle)"
+  },
+
+  {
+    name: 'sampTextdrawCreate',
+    description: 'Создает текстдрав с указаными параметрами',
+    example: "sampTextdrawCreate(int nId, string szText, float fX, float fY)"
+  },
+  {
+    name: 'sampTextdrawDelete',
+    description: 'Удаляет текстдрав по его ID',
+    example: "sampTextdrawDelete(int nId)"
+  },
+  {
+    name: 'sampTextdrawGetLetterSizeAndColor',
+    description: 'Получает длину, ширину и цвет текстдрава',
+    example: "local fWidth, fHeight, nColor = sampTextdrawGetLetterSizeAndColor(int nId)"
+  },
+  {
+    name: 'sampTextdrawSetLetterSizeAndColor',
+    description: 'Устанавливает длину, ширину и цвет текстдрава',
+    example: "sampTextdrawSetLetterSizeAndColor(int nId, float fSizeX, float fSizeY, unsigned long nColor)"
+  },
+  {
+    name: 'sampTextdrawGetPos',
+    description: 'Возвращает позицию текстдрава',
+    example: "local fX, fY = sampTextdrawGetPos(int nId)"
+  },
+  {
+    name: 'sampTextdrawGetShadowColor',
+    description: 'Возвращает размер и цвет тени текстдрава',
+    example: "local nShadow, nColor = sampTextdrawGetShadowColor(int nId)"
+  },
+  {
+    name: 'sampTextdrawSetShadowColor',
+    description: 'Устанавливает размер и цвет тени текстдраву',
+    example: "sampTextdrawSetShadowColor(int nId, int nSize, unsigned long nColor)"
+  },
+  {
+    name: 'sampTextdrawGetString',
+    description: 'Возвращает строку текстдрава',
+    example: "local szText = sampTextdrawGetString(int nId)"
+  },
+  {
+    name: 'sampTextdrawSetString',
+    description: 'Возвращает ID пикапа по его хендлу',
+    example: "sampTextdrawSetString(int nId, string szText)"
+  },
+  {
+    name: 'sampTextdrawIsExists',
+    description: 'Проверяет существует ли текстдрав',
+    example: "local result = sampTextdrawIsExists(int nId)"
+  },
+  {
+    name: 'sampTextdrawSetPos',
+    description: 'Устанавливает позицию текстдраву',
+    example: "sampTextdrawSetPos(int nId, float fX, float fY)"
+  },
+  {
+    name: 'sampTextdrawSetStyle',
+    description: 'Устанавливает стиль текстдрава',
+    example: "sampTextdrawSetStyle(int nId, int nStyle)"
+  },
+  {
+    name: 'sampTextdrawGetStyle',
+    description: 'Возвращает стиль текстдрава',
+    example: "local nStyle = sampTextdrawGetStyle(int nId)"
+  },
+  {
+    name: 'sampTextdrawSetAlign',
+    description: 'Устанавливает параметры центрирования текстдрава',
+    example: "sampTextdrawSetAlign(int nId, int nAlign)"
+  },
+  {
+    name: 'sampTextdrawGetAlign',
+    description: 'Возвращает параметры центрирования текстдрава',
+    example: "local nAlign = sampTextdrawGetAlign(int nId)"
+  },
+  {
+    name: 'sampTextdrawSetOutlineColor',
+    description: 'Устанавливает размер и цвет обводки текстдрава',
+    example: "sampTextdrawSetOutlineColor(int nId, int nOutline, unsigned long nColor)"
+  },
+  {
+    name: 'sampTextdrawGetOutlineColor',
+    description: 'Возвращает размер и цвет обводки текстдрава',
+    example: "local nOutline, nColor = sampTextdrawGetOutlineColor(int nId)"
   },
   {
       name: 'unload',
